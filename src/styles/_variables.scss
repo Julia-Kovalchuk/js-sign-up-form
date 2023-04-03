@@ -1,0 +1,15 @@
+$base-font-size: 16px;
+
+$breakpoints: (
+  mobile: rem(768px),
+  tablet: rem(1024px),
+);
+
+$colors: (
+  error: rgb(255, 67, 67),
+  white: rgb(255, 255, 255),
+  black: black,
+  gray: rgba(128, 128, 128, 0.9),
+  grayLight: rgba(255, 255, 255, 0.4),
+  beige: rgb(215, 203, 164),
+);

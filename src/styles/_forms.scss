@@ -1,0 +1,128 @@
+.form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  grid-gap: 25px;
+  max-width: 500px;
+  width: 500px;
+  padding: 30px;
+  border: 1px solid map-get($colors, white);
+
+  @include mobile {
+    grid-gap: 15px;
+    width: 100%;
+    padding: 20px 30px;
+  }
+
+  &__input-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 10px;
+
+    @include mobile {
+      grid-gap: 7px;
+    }
+  }
+
+  &__label {
+    font-weight: 500;
+  }
+
+  &__input {
+    padding: 5px 5px 5px 20px;
+    border-radius: 30px;
+    background-color: map-get($colors, grayLight);
+    color: map-get($colors, white);
+    caret-color: map-get($colors, white);
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &--invalid {
+      outline: 2px solid map-get($colors, error);
+    }
+
+    &:focus {
+      outline: 2px solid map-get($colors, white);
+    }
+
+    &:hover {
+      box-shadow: 0 1px 5px 0 map-get($colors, white);
+    }
+  }
+
+  &__error {
+    position: absolute;
+    bottom: -25px;
+    right: 10px;
+    color: map-get($colors, error);
+    font-size: rem(14px);
+
+    @include mobile {
+      bottom: -22px;
+      font-size: rem(12px);
+      text-align: right;
+    }
+  }
+
+  &__eye-button {
+    position: absolute;
+    right: 10px;
+    bottom: 7px;
+    cursor: pointer;
+
+    @include mobile {
+      bottom: 4px;
+    }
+  }
+
+  &__submit-button {
+    font-size: rem(20px);
+    font-weight: 600;
+    padding-block: 10px;
+    margin-top: 30px;
+    background: map-get($colors, beige);
+    cursor: pointer;
+    transition: all 0.3s;
+
+    @include mobile {
+      font-size: rem(16px);
+      margin-top: 25px;
+    }
+
+    &:hover {
+      scale: 1.03;
+    }
+
+    &:active {
+      scale: 0.99;
+    }
+  }
+}
+
+input[type="date"] {
+  &::-webkit-calendar-picker-indicator {
+    width: 22px;
+    height: 22px;
+    padding-right: 10px;
+    cursor: pointer;
+    filter: invert(1);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.success {
+  position: absolute;
+  bottom: 95px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  transition: all 0.3s;
+
+  @include mobile {
+    bottom: 75px;
+  }
+}

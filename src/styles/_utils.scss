@@ -1,0 +1,27 @@
+@use "sass:math";
+
+@function strip($value) {
+  @return math.div($value, ($value * 0 + 1));
+}
+
+@function rem($pxValue) {
+  @return #{math.div(strip($pxValue), strip($base-font-size))}rem;
+}
+
+@mixin tablet {
+  @media (max-width: #{map-get($breakpoints, tablet)}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{map-get($breakpoints, mobile)}) {
+    @content;
+  }
+}
+
+@mixin rwd($screen) {
+  @media (max-width: "#{$screen}px") {
+    @content;
+  }
+}

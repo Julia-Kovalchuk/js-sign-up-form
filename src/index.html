@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/main.scss" class="stylesheet" />
+
+    <title>Beautiful form</title>
+  </head>
+  <body>
+    <div class="container">
+      <form name="signUp" class="form">
+        <h2 class="form__title">Sign Up</h2>
+
+        <div class="form__input-box">
+          <label class="form__label" for="userName">Name</label>
+          <input
+            type="text"
+            name="userName"
+            id="userName"
+            class="form__input"
+          />
+          <div class="form__error error"></div>
+        </div>
+
+        <div class="form__input-box">
+          <label class="form__label" for="userLastName">Last name</label>
+          <input
+            type="text"
+            name="userLastName"
+            id="userLastName"
+            class="form__input"
+          />
+          <div class="form__error error"></div>
+        </div>
+
+        <div class="form__input-box">
+          <label class="form__label" for="userBirthDate">Birth date</label>
+          <input
+            type="date"
+            name="userBirthDate"
+            id="userBirthDate"
+            class="form__input"
+          />
+          <div class="form__error error"></div>
+        </div>
+
+        <div class="form__input-box">
+          <label class="form__label" for="email">Email</label>
+          <input type="email" name="email" id="email" class="form__input" />
+          <div class="form__error error"></div>
+        </div>
+
+        <div class="form__input-box">
+          <label class="form__label" for="password">Password</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            class="form__input"
+          />
+          <button class="form__eye-button">
+            <img src="/src/images/eye-closed.svg" class="form__eye--closed" />
+            <img
+              src="/src/images/eye-open.svg"
+              class="form__eye--open hidden"
+            />
+          </button>
+          <div class="form__error error"></div>
+        </div>
+
+        <div class="form__input-box">
+          <label class="form__label" for="passwordСonfirmation"
+            >Confirm password</label
+          >
+          <input
+            type="password"
+            name="passwordСonfirmation"
+            id="passwordСonfirmation"
+            class="form__input"
+          />
+          <button class="form__eye-button">
+            <img src="/src/images/eye-closed.svg" class="form__eye--closed" />
+            <img
+              src="/src/images/eye-open.svg"
+              class="form__eye--open hidden"
+            />
+          </button>
+          <div class="form__error error"></div>
+        </div>
+
+        <div class="success hidden">Your data was successfully accepted</div>
+        <button type="submit" class="form__submit-button">Sign Up</button>
+      </form>
+    </div>
+
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>
